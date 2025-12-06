@@ -31,7 +31,7 @@
 2.  Установите **.NET SDK 9.0**.
 3.  Убедитесь, что установлен глобальный инструмент EF Core CLI:
     ```bash
-    dotnet tool install --global dotnet-ef
+    dotnet tool install --global dotnet-ef --version 9.0.*
     ```
 
 #### Шаг 2: Настройка подключения
