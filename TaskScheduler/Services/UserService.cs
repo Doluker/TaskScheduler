@@ -49,6 +49,7 @@ namespace TaskScheduler.Services
             }
             string hashPassword = BCrypt.Net.BCrypt.HashPassword(password);
             return SaveUser(login, hashPassword);
+
         }
         private User SaveUser(string login, string password)
         {
@@ -59,6 +60,7 @@ namespace TaskScheduler.Services
                 user.HashPassword = password;
                 db.Users.Add(user);
                 db.SaveChanges();
+                SessionManager.StartSession(user);
                 return user;
             }
             catch (DbUpdateException ex)
