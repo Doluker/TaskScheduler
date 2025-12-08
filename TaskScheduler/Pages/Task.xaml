@@ -43,7 +43,7 @@
 
             <Separator Margin="0,15"/>
 
-            <StackPanel Margin="0,10,0,30">
+            <StackPanel x:Name="spEditStatus" Margin="0,10,0,30">
                 <TextBlock Text="Текущий статус" Style="{StaticResource HeaderTextBlockStyle}"/>
                 <ComboBox x:Name="cbEditStatus" ItemsSource="{Binding AvailableStatuses}" SelectedItem="{Binding Status}" DisplayMemberPath="Name" SelectionChanged="cbEditStatus_SelectionChanged" Width="200" HorizontalAlignment="Left" Style="{StaticResource ComboBoxStyle}">
                     <ComboBox.Resources>

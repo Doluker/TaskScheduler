@@ -53,6 +53,10 @@ namespace TaskScheduler.Pages
                     this.Status = initialStatus;
                     this.originalStatusId = initialStatus.Id;
                 }
+                else
+                { 
+                    spEditStatus.Visibility = Visibility.Collapsed;
+                }
                 switch (currentSchedule.Task?.Priority?.Name)
                 {
                     case "Низкий": tbPriorityName.Foreground = Brushes.Green; break;
